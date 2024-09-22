@@ -12,8 +12,22 @@ const Display = () => {
 			setError("Both first name and last name are required.");
 			return;
 		}
+
+		if (!firstName) {
+			setError("First name is required.");
+			setFullName(""); // Ensure fullName is cleared
+			return;
+		}
+		  
+		if (!lastName) {
+			setError("Last name is required.");
+			setFullName(""); // Ensure fullName is cleared
+			return;
+		}
+
+
 		setFullName(`${firstName} ${lastName}`)
-		 setError("")
+		setError("")
 	}
 
   return (
